@@ -5,7 +5,7 @@ const MONGO_PASS = "ankurpurohit@28";
 const MONGO_CLUSTER = "cluster0.v6df8xl.mongodb.net";
 const MONGO_URI = `mongodb+srv://${encodeURIComponent(MONGO_USER)}:${encodeURIComponent(MONGO_PASS)}@${MONGO_CLUSTER}/doctor-appointment-app`;
 
-const connectDB = async () => {
+const connectToMongo = async () => {
    try {
       const res = await mongoose.connect(MONGO_URI);
       if (res) {
